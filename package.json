@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node map-banchmark.js"
+  },
   "dependencies": {
     "@types/faker": "^6.6.9",
     "benny": "^3.7.1",
