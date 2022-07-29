@@ -1,0 +1,11 @@
+{
+  "name": "benchmark",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/faker": "^6.6.9",
+    "benny": "^3.7.1",
+    "faker": "^6.6.6"
+  }
+}
