@@ -24,10 +24,10 @@ benny.suite(
   }),
   benny.add('For Push', () => {
     const result = [];
-    for (const element of data) {
+    for (const item of data) {
       result.push({
-        id: element.id,
-        count: element.count * 2,
+        id: item.id,
+        count: item.count * 2,
       });
     }
   }),
@@ -39,18 +39,18 @@ benny.suite(
 benny.suite(
   'Aggregate using Reduce and Foreach',
   benny.add('Reduce', () => {
-    const count = data.reduce((sum, item) => item.count, 0);
+    const sum = data.reduce((sum, item) => item.count, 0);
   }),
   benny.add('Foreach', () => {
-    let count = 0;
+    let sum = 0;
     data.forEach(item => {
-      count += item.count;
+      sum += item.count;
     });
   }),
   benny.add('For', () => {
-    let count = 0;
-    for (const element of data) {
-      count += element.count;
+    let sum = 0;
+    for (const item of data) {
+      sum += item.count;
     }
   }),
   benny.cycle(),
@@ -71,6 +71,12 @@ benny.suite(
     data.forEach(item => {
       if (item.count * 2 > 3) sum += item.count * 2;
     });
+  }),
+  benny.add('For', () => {
+    let sum = 0;
+    for (const item of data) {
+      if (item.count * 2 > 3) sum += item.count * 2;
+    }
   }),
   benny.cycle(),
   benny.complete(),
